@@ -5,9 +5,9 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ImgCar")
+@Table(name = "ImgMoto")
 @Data
-public class ImgCar {
+public class ImgMoto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idImg;

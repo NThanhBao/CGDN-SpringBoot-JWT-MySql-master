@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "ProductCar")
+@Table(name = "ProductMoto")
 @Data
-public class ProductCar {
+public class ProductMoto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,12 +21,12 @@ public class ProductCar {
 
     @ManyToOne
     @JoinColumn(name = "id_TypeCar", nullable = false)
-    TypeProductCar typeProductCar;
+    TypeProduct typeProduct;
 
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "productMoto_id")
     //  @JsonIgnoreProperties({"id"})
     @Lob
-    private List<ImgCar> images = new ArrayList<>();
+    private List<ImgMoto> images = new ArrayList<>();
 }

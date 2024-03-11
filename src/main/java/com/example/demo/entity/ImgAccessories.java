@@ -5,12 +5,14 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "TypeCar")
+@Table(name = "ImgAccessories")
 @Data
-public class TypeProductCar {
+public class ImgAccessories {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(nullable = false, unique = true)
-    private String nameType;
+    private Long idImg;
+
+    private String imgBase64;
+
+    private String content;
 }

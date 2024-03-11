@@ -1,10 +1,10 @@
 package com.example.demo.repositories;
 
-import com.example.demo.entity.ProductCar;
+import com.example.demo.entity.ProductMoto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProductCarRepository extends JpaRepository<ProductCar,Long> {
+public interface ProductCarRepository extends JpaRepository<ProductMoto,Long> {
 
 }
