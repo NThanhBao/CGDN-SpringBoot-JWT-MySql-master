@@ -1,24 +1,24 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.ProductMoto;
-import com.example.demo.service.ProductMotoService;
+import com.example.demo.entity.Product;
+import com.example.demo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/admin/productcar")
 @RestController
-public class ProductCarController {
+public class ProductController {
     @Autowired
-    ProductMotoService productMotoService;
+    ProductService productService;
 
     @PostMapping("/add")
-    public ResponseEntity<?> addProduct(@RequestBody ProductMoto productMoto){
-        return productMotoService.put(productMoto);
+    public ResponseEntity<?> addProduct(@RequestBody Product productMoto){
+        return productService.put(productMoto);
     }
 
     @GetMapping("/getall")
     public ResponseEntity<?> getAllProductCar(){
-        return productMotoService.get();
+        return productService.get();
     }
 }

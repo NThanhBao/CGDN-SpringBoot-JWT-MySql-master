@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "ProductMoto")
+@Table(name = "Product")
 @Data
-public class ProductMoto {
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,6 +18,8 @@ public class ProductMoto {
 
     private long price;
     private long quantity;
+
+    private int  discount;
 
     @ManyToOne
     @JoinColumn(name = "id_TypeCar", nullable = false)
@@ -28,5 +30,5 @@ public class ProductMoto {
     @JoinColumn(name = "productMoto_id")
     //  @JsonIgnoreProperties({"id"})
     @Lob
-    private List<ImgMoto> images = new ArrayList<>();
+    private List<Img> images = new ArrayList<>();
 }

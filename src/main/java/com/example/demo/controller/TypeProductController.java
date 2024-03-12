@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping("/admin/typeCar")
 @Controller
-public class TypeProductCarController {
+public class TypeProductController {
 
     @Autowired
     TypeProductService typeProductService;
